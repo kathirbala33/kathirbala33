@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="progress_blue">#4697FE</color>
+    <color name="Black">#000000</color>
+    <color name="Header">#1C3F78</color>
+    <color name="blue">#1b3d74</color>
+    <color name="grey">#FAFAFA</color>
+    <color name="white_light_2">#F4F3F3</color>
+    <color name="white_light">#E0E0E0</color>
+    <color name="white_light_1">#F1F1F1</color>
+    <color name="grey_six">#666666</color>
+    <color name="gery_light">#BDBDBD</color>
+    <color name="deviceTextColor">#00f3ff</color>
+    <color name="causing_blue">#03b5f2</color>
+    <color name="medication_add_blue">#1e88f9</color>
+    <color name="light_blue">#7d7bf0</color>
+    <color name="min_max_text">#f78b07</color>
+    <color name="rating_bar_color">#FFAB0F</color>
+    <color name="notification_tab_color">#4596F3</color>
+    <color name="notification_icon_color">#1e88f9</color>
+    <color name="my_plant_search_green">#F4D8D7</color>
+    <color name="gray">#B6B1AC</color>
+    <color name="name_txt_color">#6E353E</color>
+    <color name="sender_file_background_color">#4172A3</color>
+    <color name="role_bg">#FBF0F6</color>
+    <color name="staff_message_title_color">#007AFF</color>
+
+
+
+
+
+    <!--Background Colors  -->
+    <color name="background_none">#00000000</color>
+    <color name="profile_header">#0D65A8</color>
+    <color name="agreement_read_more_bg">#0347f4</color>
+    <color name="user_otp_code_background">#eaefff</color>
+    <!--home_page-->
+    <color name="symptomsTextColor">#97fd03</color>
+    <color name="dailyHealthTextColor">#ff21a4</color>
+    <color name="healthRecordTextColor">#00d8ff</color>
+    <color name="questionnaireTextColor">#ffaa02</color>
+    <color name="empty_progress_color">#ED026666</color>
+
+    <!--BP - Goal Screen  -->
+    <color name="sys_dia_goal_bg">#0f457f</color>
+    <color name="sys_dia_goal_min">#56f704</color>
+    <color name="sys_dia_goal_max">#f95406</color>
+
+    <!--SleepPutPostRequestDeviceItems Data Color-->
+    <color name="content_Swipe_Delete">#ff0000</color>
+    <color name="bpReadingTitle">#1ea71a</color>
+    <color name="dateColor">#c4c4c4</color>
+    <color name="childLayoutBg">#1b437d</color>
+    <color name="iconLayoutBg">#30568e</color>
+    <color name="iconLayoutBg_1">#006CBA</color>
+    <color name="symptom_seek_bar_orange">#e85d1c</color>
+
+    <!--Bluetooth screen-->
+    <color name="btm_header_add">#04B6D9</color>
+    <color name="device_list_bg">#024F85</color>
+    <color name="device_list_bg_1">#5796C5</color>
+    <color name="darkGray">#AAABAF</color>
+    <color name="bottom_tab_color">#4a4a4a</color>
+    <color name="sys_circle_color">#50cf11</color>
+    <color name="dia_circle_color">#fe6600</color>
+    <color name="circle_bg_color">#33224f</color>
+    <color name="pulse_bp_circle_color">#ec2d97</color>
+    <color name="rem_sleep_progress_color">#FF4284</color>
+    <color name="deep_sleep_progress_color">#FC5400</color>
+    <color name="light_sleep_progress_color">#30D1F4</color>
+    <!--Blood_pressure_fragment-->
+    <color name="bp_sys_text">#50cf11</color>
+    <color name="bp_dia_text">#fe6600</color>
+    <color name="bpPulText">#ec2d97</color>
+    <color name="reading">#00d8ff</color>
+
+    <!--Blood_pressure_dashboard_fragment-->
+    <color name="color_dashboard_red_color">#D92421</color>
+
+    <!-- Register pin Screen -->
+    <color name="finger_print_bg">#82D905</color>
+    <color name="login_btn_bg">#0277BD</color>
+    <color name="alert_ok_btn_bg">#AF28F7</color>
+
+    <!--Add Notes - Menu Screen -->
+    <color name="cancel_red">#ff0000</color>
+    <color name="notification_count_red">#E11A1A</color>
+    <color name="white_trans">#55ffffff</color>
+
+    <!--Three dot popup menu-->
+    <color name="update_notes">#DBA726</color>
+    <color name="edit_color">#F2568D</color>
+    <color name="print_color">#50cf11</color>
+    <color name="share_color">#f95406</color>
+    <color name="delete_color">#14b9c4</color>
+    <color name="reg_pin_bg_color">#2AB3E8</color>
+
+
+    <color name="bp_hg_goal_details">#0f2451</color>
+    <color name="bp_hg_goal_history_min">#55f702</color>
+    <color name="bp_hg_goal_history_max">#f95406</color>
+
+
+    <!--medication popup -->
+    <color name="bp_medication_layout_bar">#6b89a3</color>
+    <color name="bp_medication_text">#ffffff</color>
+    <color name="bp_medication_details">#ffffff</color>
+
+
+    <!--menu_divider_line-->
+
+    <color name="mood_menu_divider">#62819D</color>
+    <color name="edit_goal_bg">#FFCC00</color>
+
+    <!--bottom_navigation_Calendar-->
+    <color name="bottom_navigation_text_background_green">#00F900</color>
+    <color name="bottom_navigation_text_color">#555555</color>
+    <color name="bottom_navigation_text_background_blue">#034381</color>
+
+    <color name="color_yellow">#FFFF00</color>
+    <color name="color_green">#50cf11</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_red">#D50000</color>
+    <color name="color_orange">#FF6200</color>
+    <color name="red">#F44336</color>
+
+    <!--Activity_goal_screen-->
+    <color name="act_goal_duration">#ffeb02</color>
+    <color name="act_goal_activity">#ff99ff</color>
+    <color name="act_goal_distance">#ff83ad</color>
+    <color name="act_goal_rest">#02ffff</color>
+    <color name="multi_select_background">#b0e9f0fa</color>
+    <color name="linear_line_color">#336EA1</color>
+
+
+    <!--Pain Area Popup Color-->
+    <color name="pain_popup_bg">#2c5d91</color>
+
+    <!--96 color order by MDActivityTrackerMaserTable-->
+    <!-- /*Colors for Activity Bar Graph*/-->
+    <color name="color_walking">#800000</color>
+    <color name="color_running">#3fa649</color>
+    <color name="color_cycling">#FF6347</color>
+    <color name="color_hiking">#8B4513</color>
+    <color name="color_strength">#82D905</color>
+    <color name="color_treadmill">#4682B4</color>
+    <color name="color_cycling_machine">#6495ED</color>
+    <color name="color_swimming">#87CE93</color>
+    <color name="color_step_machine">#000080</color>
+    <color name="color_golf">#DEB887</color>  <!-- /* 10 */-->
+    <color name="color_tennis">#8A2BE2</color>
+    <color name="color_skiing">#808000</color>
+    <color name="color_judo">#FFA500</color>
+    <color name="color_karate">#008000</color>
+    <color name="color_car_dio">#800080</color>
+    <color name="color_mountain_biking">#424242</color>
+    <color name="color_martial_arts">#800080</color>
+    <color name="color_take_won_do">#FF4500</color>
+    <color name="color_snowboarding">#9ACD32</color>
+    <color name="color_down_hill_skill">#008080</color> <!-- /* 20 */-->
+    <color name="color_skating">#0000FF</color>
+    <color name="color_snowshoeing">#7CFC00</color>
+    <color name="color_hockey">#EEE8AA</color>
+    <color name="color_rowing">#2F4F4F</color>
+    <color name="color_soccer">#C71585</color>
+    <color name="color_basketball">#008B8B</color>
+    <color name="color_baseball">#FFFF00</color>
+    <color name="color_volleyball">#778899</color>
+    <color name="color_handball">#F564DC</color>
+    <color name="color_badminton">#7B68EE</color> <!-- /* 30 */-->
+    <color name="color_aerobic">#DC143C</color>
+    <color name="color_boxing">#808080</color>
+    <color name="color_yoga">#A52A2A</color>
+    <color name="color_fishing">#D92626</color>
+    <color name="color_table_tennis">#4000D2</color>
+    <color name="color_dancing">#90F414</color>
+    <color name="color_active_energy">#ffffff</color>
+    <color name="color_dietary_energy">#ffffff</color>
+    <color name="color_resting_energy">#ffffff</color>
+    <color name="color_steps">#ffffff</color>  <!-- /* 40 */-->
+    <color name="color_walking_running_distance">#ffffff</color>
+    <color name="color_down_hill_snow_sports">#ffffff</color>
+    <color name="color_wheelchair_distance">#ffffff</color>
+    <color name="color_swimming_distance">#ffffff</color>
+    <color name="color_cycling_distance">#ffffff</color>
+    <color name="color_archery">#E28A2F</color>
+    <color name="color_bowling">#32CD32</color>
+    <color name="color_fencing">#00FA9A</color>
+    <color name="color_gymnastics">#2E8B57</color>
+    <color name="color_track_field">#1B3764</color>  <!-- /* 50 */-->
+    <color name="color_american_football">#00FFFF</color>
+    <color name="color_australian_football">#191970</color>
+    <color name="color_cricket">#0000CD</color>
+    <color name="color_lacrosse">#2E8B57</color>
+    <color name="color_rugby">#AF6421</color>
+    <color name="color_softball">#37F49A</color>
+    <color name="color_preparation_recovery">#6021DC</color>
+    <color name="color_flexibility">#FF0984</color>
+    <color name="color_wheelchair_walk_pace">#1A4DF4</color>
+    <color name="color_wheelchair_run_pace">#8A2BEC</color>   <!-- /* 60 */-->
+    <color name="color_hand_cycling">#4B008A</color>
+    <color name="color_core_training">#800080</color>
+    <color name="color_elliptical">#BE6414</color>
+    <color name="color_functional_strength_training">#B432C8</color>
+    <color name="color_traditional_strength_training">#E60000</color>
+    <color name="color_cross_training">#B94646</color>
+    <color name="color_mixed_car_dio">#32CDC8</color>
+    <color name="color_high_intensity_training">#96FA82</color>
+    <color name="color_Jump_Rope">#0032EF</color>
+    <color name="color_Stair_Stepper">#E26414</color> <!-- /* 70 */-->
+    <color name="color_stairs">#FA0058</color>
+    <color name="color_step_training">#AA1EC8</color>
+    <color name="color_Barre">#70C832</color>
+    <color name="color_dance">#00CDE6</color>
+    <color name="color_mind_body">#CD4F00</color>
+    <color name="color_pilate">#B41E1B</color>
+    <color name="color_racquetball">#50CC32</color>
+    <color name="color_squash">#3BC8FA</color>
+    <color name="color_climbing">#82B4EF</color>
+    <color name="color_equestrian_sports">#64E24F</color>  <!-- /* 80 */-->
+    <color name="color_hunting">#5AC832</color>
+    <color name="color_play">#FF69B4</color>
+    <color name="color_cross_country_skiing">#DA70D6</color>
+    <color name="color_curling">#A0522D</color>
+    <color name="color_snow_sports">#BC8F8F</color>
+    <color name="color_skating_sports">#C85AC8</color>
+    <color name="color_paddle_sports">#A9A9A9</color>
+    <color name="color_sailing">#228B22</color>
+    <color name="color_surfing_sports">#0AB4BE</color>
+    <color name="color_water_fitness">#D7FF09</color>  <!-- /* 90 */-->
+    <color name="color_water_polo">#B8820A</color>
+    <color name="color_water_sports">#CDB4B4</color>
+    <color name="color_kickboxing">#CD8546</color>
+    <color name="color_tai_chi">#0FE978</color>
+    <color name="color_wrestling">#878596</color>
+    <color name="color_other">#91FFBE</color>
+    <color name="color_random_activity">#ffffff</color>
+    <color name="color_dick_sports">#6478C8</color>
+    <color name="color_fitness_gaming">#15506F</color>
+    <color name="color_pick_ball">#7C37DC</color><!-- /* 100 */-->
+    <color name="color_social_dance">#6EC8AF</color>
+    <color name="color_cardio_dance">#BDFAC8</color>
+    <color name="color_cooldown">#41637A</color><!-- /* 103 */-->
+    <!--new 104-->
+    <color name="color_beach_volleyball">#344320</color>
+    <color name="color_indoor_volleyball">#ff96ca</color>
+    <color name="color_cross_skating">#AF6347</color>
+    <color name="color_ice_skating">#022f66</color>
+    <color name="color_indoor_skating">#fb9c4c</color>
+    <color name="color_inline_skating">#a9cfe4</color>
+    <color name="color_skateboarding">#e3a60c</color><!-- /* 110 */-->
+    <color name="color_horseback_riding">#fa199c</color>
+    <color name="color_polo">#5fdb23</color>
+    <color name="color_jogging">#c808be</color>
+    <color name="color_jumping_rope">#da4509</color>
+    <color name="color_aerobics">#1e2dcf</color>
+    <color name="color_kayaking">#1cd2e0</color>
+    <color name="color_stand_up_paddle_boarding">#02718f</color>
+    <color name="color_kite_surfing">#00c1aa</color>
+    <color name="color_surfing">#94e937</color>
+    <color name="color_wind_surfing">#bedb31</color><!-- /* 120 */-->
+    <color name="color_meditating">#dc0549</color>
+    <color name="color_sledding">#57c72f</color>
+    <color name="color_strength_training">#e7bd11</color>
+    <color name="color_backcountry_skiing">#d50d82</color>
+    <color name="color_biathlon">#0fb392</color>
+    <color name="color_biking">#d8ebce</color>
+    <color name="color_calisthenics">#5baa37</color>
+    <color name="color_circuit_training">#978733</color>
+    <color name="color_crossfit">#e5d2ff</color>
+    <color name="color_diving">#06b560</color><!-- /* 130 */-->
+    <color name="color_ergometer">#97361e</color>
+    <color name="color_fitness_walking">#df863b</color>
+    <color name="color_flossing">#6e21b8</color>
+    <color name="color_Frisbee">#0282fd</color>
+    <color name="color_Gardening">#0eb965</color>
+    <color name="color_interval_training">#084681</color>
+    <color name="color_kettlebell">#0fcaf2</color>
+    <color name="color_kick_scooter">#826fe4</color>
+    <color name="color_kite_skiing">#e9cac6</color>
+    <color name="color_mixed_martial_arts">#0dc3df</color><!-- /* 140 */-->
+    <color name="color_nordic_walking">#a71f77</color>
+    <color name="color_open_water_swimming">#c0d464</color>
+    <color name="color_p90x">#8116a8</color>
+    <color name="color_paced_walking">#d59e76</color>
+    <color name="color_paragliding">#48a68b</color>
+    <color name="color_pool_swimming">#a87556</color>
+    <color name="color_road_biking">#58f3b3</color>
+    <color name="color_rock_climbing">#72bdd2</color>
+    <color name="color_roller_skiing">#eacda3</color>
+    <color name="color_rowing_machine">#ca5187</color><!-- /* 150 */-->
+    <color name="color_sand_running">#bd3449</color>
+    <color name="color_scuba_diving">#65ffff</color>
+    <color name="color_spinning">#60fecc</color>
+    <color name="color_stair_climbing">#944656</color>
+    <color name="color_stationary_biking">#524a72</color>
+    <color name="color_stroller_walking">#523e6a</color>
+    <color name="color_treadmill_running">#9d6c6e</color>
+    <color name="color_treadmill_walking">#1d6e92</color>
+    <color name="color_utility_biking">#327b70</color>
+    <color name="color_wakeboarding">#cccee2</color><!-- /* 160 */-->
+    <color name="color_weightlifting">#0c5743</color>
+    <color name="color_wheelchair">#d0feda</color>
+    <color name="color_zumba">#d793b6</color>
+    <color name="color_in_vehicle">#533051</color>
+    <color name="color_tilting">#7dadcf</color>
+    <color name="color_handbiking">#927b5c</color>
+    <color name="color_housework">#a2fed8</color>
+    <color name="color_meditation">#4c9792</color>
+    <color name="color_snowmobile">#399177</color>
+    <color name="color_stair_climbing_machine">#0d4c4f</color><!-- /* 170 */-->
+    <color name="color_team_sports">#528969</color>
+    <color name="color_elevator">#e76fb6</color>
+    <color name="color_escalator">#5c4345</color>
+    <color name="color_guided_breathing">#15705b</color><!-- /* 174 */-->
+
+    <!--Message Attachment Popup-->
+    <color name="msg_attachment_background">#80294167</color>
+
+    <!--Settings color-->
+    <color name="personal_details_header">#33ffffff</color>
+    <color name="pink">#ff96ca</color>
+
+    <!--HealthRecord Color-->
+    <color name="health_record_text_color">#333333</color>
+    <color name="health_record_date_color">#666666</color>
+    <color name="health_record_icon_color">#002e62</color>
+
+    <color name="tick_grey">#9f9f9f</color>
+
+
+    <!-- Clinical staffs-->
+
+    <color name="medication_home_history">#0fa2fc</color>
+    <color name="medication_home_add">#0ad535</color>
+    <color name="text_grey">#9c9c9c</color>
+    <color name="text_blue">#10a1fc</color>
+    <color name="offWhite">#BEBEBF</color>
+    <color name="half_white">#f4f4f4</color>
+    <color name="clinical_blue_bg">#4e35ef</color>
+    <color name="welcome_text_grey">#4C4747</color>
+
+    <color name="medication_adapter_bg">#E5E9E8</color>
+    <color name="medication_details">#ebeffb</color>
+    <color name="clinical_tab_bg">#07A4D8</color>
+
+    <color name="bp_gradient_top">#ffba00</color>
+    <color name="bp_gradient_bottom">#ff057b</color>
+    <color name="glucose_gradient_top">#7200ff</color>
+    <color name="glucose_gradient_bottom">#00b4ff</color>
+    <color name="spo2_gradient_top">#5339ef</color>
+    <color name="spo2_gradient_bottom">#f80086</color>
+    <color name="heart_rate_gradient_top">#3953ef</color>
+    <color name="heart_rate_gradient_bottom">#00f8b5</color>
+    <color name="temperature_gradient_top">#ff0000</color>
+    <color name="temperature_gradient_bottom">#f6b34b</color>
+    <color name="scale_gradient_top">#8400ff</color>
+    <color name="scale_gradient_bottom">#0028ac</color>
+    <color name="activity_gradient_top">#ff0090</color>
+    <color name="activity_gradient_bottom">#0823fc</color>
+    <color name="smoking_gradient_top">#8a00ff</color>
+    <color name="smoking_gradient_bottom">#de8a43</color>
+    <color name="drinking_gradient_top">#8a00ff</color>
+    <color name="drinking_gradient_bottom">#3fd5e2</color>
+    <color name="calories_gradient_top">#ff00c0</color>
+    <color name="calories_gradient_bottom">#09cbfd</color>
+    <color name="steps_gradient_top">#8a00ff</color>
+    <color name="steps_gradient_bottom">#de3bd9</color>
+    <color name="distance_gradient_top">#006cff</color>
+    <color name="distance_gradient_bottom">#2fd6e5</color>
+    <color name="deep_sleep_gradient_top">#1e23ff</color>
+    <color name="deep_sleep_gradient_bottom">#af1fee</color>
+    <color name="light_sleep_gradient_top">#a200ff</color>
+    <color name="light_sleep_gradient_bottom">#fb1ded</color>
+    <color name="rest_gradient_top">#16b756</color>
+    <color name="deep_sleep_bar_top">#2a988f</color>
+    <color name="deep_sleep_bar_bottom">#3dccc0</color>
+    <color name="light_sleep_bar_top">#fcb25d</color>
+    <color name="light_sleep_bar_bottom">#f38d65</color>
+    <color name="rem_sleep_bar_top">#885bfe</color>
+    <color name="rem_sleep_bar_bottom">#5d35cc</color>
+
+    <color name="clinical_welcome_text">#10a1fc</color>
+    <color name="clinical_history_arrow">#30a5ff</color>
+    <!--forward screen layout colors-->
+    <color name="clinical_forward_screen_message">#05D512</color>
+    <color name="clinical_forward_screen_call">#5087FD</color>
+    <color name="clinical_forward_screen_appointment">#FF35B5</color>
+    <color name="clinical_header_doctor_name">#fefefe</color>
+    <color name="clinical_header_mrn_id">#d3dbfc</color>
+    <color name="clinical_symptoms_heading">#4CA1FB</color>
+    <color name="clinical_alert_history_popup_text">#898a99</color>
+    <color name="clinical_medication_notes_grey_color">#ff9f9f9f</color>
+    <color name="deep_sleep_bar_color">#46A59B</color>
+    <color name="light_sleep_bar_color">#F19064</color>
+    <color name="rem_sleep_bar_color">#6239D2</color>
+    <color name="link_blue">#1082fd</color>
+    <color name="receiver_link_background">#ededed</color>
+    <color name="sender_link_background">#d9d9d9</color>
+    <color name="receiver_side_blue">#034381</color>
+    <color name="link_date_color">#989898</color>
+    <color name="staff_history_icon_background">#C2CED8</color>
+    <color name="staff_graph_circle_color">#50cf11</color>
+    <color name="staff_graph_o2_circle_color">#655bd5</color>
+    <color name="staff_graph_weight_circle_color">#6e65e0</color>
+    <color name="staff_message_sender_background">#2EA5FF</color>
+    <color name="security_question_dropdown_line">#94B4D6</color>
+    <color name="setting_gradient_one">#0d66ad</color>
+    <color name="setting_gradient_two">#0d4e8c</color>
+</resources>

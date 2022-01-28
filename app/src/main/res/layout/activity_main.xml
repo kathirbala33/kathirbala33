@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawLayoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gery_light"
+    android:layout_gravity="start"
+    tools:context="com.myconsole.app.activity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/backArrowImageView"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:background="@drawable/back_arrow"
+            android:contentDescription="@string/app_name" />
+        <ImageView
+            android:id="@+id/menuImageView"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/menu"
+            android:contentDescription="@string/app_name" />
+      <FrameLayout
+          android:id="@+id/mainFragmentLayout"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:visibility="gone"
+          android:layout_below="@+id/menuImageView"
+        >
+      </FrameLayout>
+        <ImageView
+            android:id="@+id/centerImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/myconsole"/>
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginEnd="@dimen/_100sdp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/navigationViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/myConsoleImageView"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/myconsole"
+                android:contentDescription="@string/app_name" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/myConsoleImageView"
+                android:background="@color/medication_add_blue">
+           <TextView
+               android:id="@+id/locationTextView"
+               android:layout_width="wrap_content"
+               android:layout_height="@dimen/_40sdp"
+               android:textSize="@dimen/_20sdp"
+               android:layout_centerHorizontal="true"
+               android:text="@string/location_fragment"/>
+            <TextView
+                android:id="@+id/googleFitTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/locationTextView"
+                android:textSize="@dimen/_20sdp"
+                android:layout_centerHorizontal="true"
+                android:text="@string/google_fit"/>
+            <TextView
+                android:id="@+id/linkTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:textSize="@dimen/_20sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/googleFitTextView"
+                android:text="@string/link"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>
