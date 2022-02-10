@@ -79,7 +79,7 @@
                 android:layout_below="@+id/locationTextView"
                 android:textSize="@dimen/_20sdp"
                 android:layout_centerHorizontal="true"
-                android:text="@string/google_fit"/>
+                android:text="@string/link"/>
             <TextView
                 android:id="@+id/linkTextView"
                 android:layout_width="wrap_content"
@@ -87,7 +87,7 @@
                 android:textSize="@dimen/_20sdp"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/googleFitTextView"
-                android:text="@string/link"/>
+                android:text="@string/google_fit"/>
             </RelativeLayout>
         </RelativeLayout>
     </com.google.android.material.navigation.NavigationView>

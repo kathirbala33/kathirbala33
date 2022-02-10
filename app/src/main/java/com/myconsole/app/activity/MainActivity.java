@@ -1,37 +1,35 @@
 package com.myconsole.app.activity;
 
-import static com.myconsole.app.fragment.LocationFragment.LOCATION_PERMISSION_CODE;
 import static com.myconsole.app.commonClass.Utils.printLog;
+import static com.myconsole.app.fragment.LocationFragment.LOCATION_PERMISSION_CODE;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.myconsole.app.R;
+import com.myconsole.app.databinding.ActivityMainBinding;
 import com.myconsole.app.fragment.LocationFragment;
 import com.myconsole.app.fragment.MapsFragment;
-import com.myconsole.app.R;
+import com.myconsole.app.fragment.link.LinkFragment;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private DrawerLayout drawerLayout;
-    private FrameLayout mainFragmentLayout;
-    private TextView locationTextView, googleFitTextView, linkTextView;
-    private ImageView menuImageView, backArrowImageView,centerImageView;
+    private ActivityMainBinding binding;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         getSupportActionBar().hide();
         initializeUI();
     }
@@ -46,29 +44,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initializeUI() {
-        drawerLayout = findViewById(R.id.drawLayoutMain);
-        menuImageView = findViewById(R.id.menuImageView);
-        locationTextView = findViewById(R.id.locationTextView);
-        googleFitTextView = findViewById(R.id.googleFitTextView);
-        linkTextView = findViewById(R.id.linkTextView);
-        mainFragmentLayout = findViewById(R.id.mainFragmentLayout);
-        backArrowImageView = findViewById(R.id.backArrowImageView);
-        centerImageView= findViewById(R.id.centerImageView);
-        menuImageView.setOnClickListener(this);
-        locationTextView.setOnClickListener(this);
-        googleFitTextView.setOnClickListener(this);
-        linkTextView.setOnClickListener(this);
-        backArrowImageView.setOnClickListener(this);
+        binding.menuImageView.setOnClickListener(this);
+        binding.locationTextView.setOnClickListener(this);
+        binding.googleFitTextView.setOnClickListener(this);
+        binding.linkTextView.setOnClickListener(this);
+        binding.backArrowImageView.setOnClickListener(this);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Fragment fragmentName = getSupportFragmentManager().findFragmentById(R.id.mainFragmentLayout);
+        getClass().getSimpleName();
     }
 
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.menuImageView) {
-            drawerLayout.openDrawer(GravityCompat.START);
+            binding.drawLayoutMain.openDrawer(GravityCompat.START);
         } else if (v.getId() == R.id.locationTextView) {
             commitFragments(0);
         } else if (v.getId() == R.id.googleFitTextView) {
-            commitFragments(0);
+            commitFragments(1);
         } else if (v.getId() == R.id.linkTextView) {
             commitFragments(0);
         } else if (v.getId() == R.id.backArrowImageView) {
@@ -79,14 +76,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void commitFragments(int fragmentID) {
         Fragment fragment = null;
-        centerImageView.setVisibility(View.GONE);
-        mainFragmentLayout.setVisibility(View.VISIBLE);
-        drawerLayout.closeDrawers();
-        drawerLayout.closeDrawer(GravityCompat.START, true);
+        binding.centerImageView.setVisibility(View.GONE);
+        binding.mainFragmentLayout.setVisibility(View.VISIBLE);
+        binding.drawLayoutMain.closeDrawers();
+        binding.drawLayoutMain.closeDrawer(GravityCompat.START, true);
         if (fragmentID == 0) {
             fragment = new MapsFragment();
         } else if (fragmentID == 1) {
-            fragment = new LocationFragment();
+            fragment = new LinkFragment();
         } else {
             fragment = new LocationFragment();
         }

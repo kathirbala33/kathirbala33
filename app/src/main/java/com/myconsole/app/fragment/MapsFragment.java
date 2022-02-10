@@ -51,15 +51,15 @@ public class MapsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+    }
+
+    private void initializeUI() {
+        context = getActivity();
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         if (mapFragment != null) {
             mapFragment.getMapAsync(callback);
         }
-    }
-
-    private void initializeUI() {
-        context = getActivity();
         checkLocationPermission();
     }
 
@@ -87,10 +87,21 @@ public class MapsFragment extends Fragment {
                         printLog("##LocationLan", "--" + location.getLatitude());
                         printLog("##Locationlong", "--" + location.getLongitude());
                         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-                        map.addMarker(new MarkerOptions().position(latLng).title("Current Location"));
-                        map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(),  location.getLongitude()), 12.0f));
+                        if (map != null) {
+                            map.addMarker(new MarkerOptions().position(latLng).title("Current Location"));
+                            map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 12.0f));
+                        }else{
+                            SupportMapFragment mapFragment =
+                                    (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
+                            if (mapFragment != null) {
+                                mapFragment.getMapAsync(callback);
+                            }
+                            if (map != null) {
+                                map.addMarker(new MarkerOptions().position(latLng).title("Current Location"));
+                                map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 12.0f));
+                            }
+                        }
                     }
-
                 }).addOnFailureListener(e -> {
                     printLog("##LocationOnFailure", "--" + e);
                 });

@@ -37,7 +37,7 @@ public class LocationFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.location_fragment, container);
         initializeUI();
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return view;
 
     }
 

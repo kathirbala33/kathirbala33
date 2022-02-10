@@ -3,4 +3,5 @@
     <string name="location_fragment">Location</string>
     <string name="google_fit">Google Fit</string>
     <string name="link">Link</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>
