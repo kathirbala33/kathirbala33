@@ -3,5 +3,31 @@
     <string name="location_fragment">Location</string>
     <string name="google_fit">Google Fit</string>
     <string name="link">Link</string>
+    <string name="bluetooth_connection">Bluetooth Conection</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="vital_title">BloodPressure</string>
+    <string name="vital_spo2">Spo2</string>
+    <string name="vital_weight">Weight</string>
+    <string name="vital_temp">Temperature</string>
+    <string name="vital_glucose">Glucose</string>
+    <string name="vital_heart_rate">Heart Rate</string>
+    <string name="vital_sys">SYS</string>
+    <string name="vital_dia">DIA</string>
+    <string name="vital_graph">View Graph</string>
+    <string name="link_title">Link Title</string>
+    <string name="link_description">Link Description</string>
+    <string name="link_picture">Link Picture</string>
+    <string name="past_link">Past your Link....</string>
+    <string name="link_preview">Link Preview</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
 </resources>

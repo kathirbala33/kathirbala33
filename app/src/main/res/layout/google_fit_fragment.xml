@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.googleFit.GoogleFitFragment">
+
+    <ImageView
+        android:id="@+id/googleSignInImageView"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/gbutton"
+        android:visibility="gone"
+        android:contentDescription="@string/app_name" />
+
+    <RelativeLayout
+        android:id="@+id/vitalNameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/bpLayout"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/bpImageView"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bp_icon"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/viewBPVitalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/bpImageView"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/aclonica"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/vital_title"
+                android:textColor="@color/home_blue"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/spo2Layout"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/bpLayout"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/spo2ImageView"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/spo2_icon"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/viewSpo2VitalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/spo2ImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/aclonica"
+                android:gravity="center"
+                android:text="@string/vital_spo2"
+                android:textColor="@color/home_blue"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/heartRateLayout"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bpLayout"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/heartRateImageView"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/heart_rate_icon"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/viewHeartRateVitalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/heartRateImageView"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/vital_heart_rate"
+                android:textStyle="bold"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/aclonica"
+                android:textColor="@color/home_blue"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/weightLayout"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spo2Layout"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/bpLayout"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/weightImageView"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/weight_icon"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/viewWeightVitalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/weightImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/aclonica"
+                android:text="@string/vital_weight"
+                android:textColor="@color/home_blue" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/temperatureLayout"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weightLayout"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/temperatureImageView"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/thermometer_icon"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/viewtemperatureVitalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/temperatureImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/aclonica"
+                android:text="@string/vital_temp"
+                android:textColor="@color/home_blue" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/glucoseLayout"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weightLayout"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/bpLayout"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/glucoseImageView"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/glucometer_icon"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/viewGlucoseVitalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/glucoseImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/aclonica"
+                android:text="@string/vital_glucose"
+                android:textColor="@color/home_blue" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

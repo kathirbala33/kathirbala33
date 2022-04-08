@@ -4,41 +4,68 @@
     android:id="@+id/drawLayoutMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gery_light"
     android:layout_gravity="start"
+    android:background="@color/gery_light"
     tools:context="com.myconsole.app.activity.MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white">
+        android:background="@drawable/gradian_home">
+
         <ImageView
             android:id="@+id/backArrowImageView"
-            android:layout_marginTop="@dimen/_5sdp"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
             android:background="@drawable/back_arrow"
+            android:backgroundTint="@color/white"
             android:contentDescription="@string/app_name" />
+
         <ImageView
             android:id="@+id/menuImageView"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
             android:layout_alignParentEnd="true"
-            android:background="@drawable/menu"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/setting"
+            android:backgroundTint="@color/white"
             android:contentDescription="@string/app_name" />
-      <FrameLayout
-          android:id="@+id/mainFragmentLayout"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:visibility="gone"
-          android:layout_below="@+id/menuImageView"
-        >
-      </FrameLayout>
-        <ImageView
-            android:id="@+id/centerImageView"
+
+        <FrameLayout
+            android:id="@+id/mainFragmentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/menuImageView"
+            android:visibility="gone">
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/firstTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/myconsole"/>
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/backArrowImageView"
+            android:layout_toStartOf="@+id/menuImageView"
+            android:gravity="center"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25sdp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/centerImageView"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/logo"
+            android:contentDescription="@string/app_name"
+            android:visibility="visible" />
     </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -58,36 +85,49 @@
                 android:layout_width="@dimen/_40sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/myconsole"
+                android:background="@drawable/logo"
                 android:contentDescription="@string/app_name" />
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/myConsoleImageView"
                 android:background="@color/medication_add_blue">
-           <TextView
-               android:id="@+id/locationTextView"
-               android:layout_width="wrap_content"
-               android:layout_height="@dimen/_40sdp"
-               android:textSize="@dimen/_20sdp"
-               android:layout_centerHorizontal="true"
-               android:text="@string/location_fragment"/>
-            <TextView
-                android:id="@+id/googleFitTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_below="@+id/locationTextView"
-                android:textSize="@dimen/_20sdp"
-                android:layout_centerHorizontal="true"
-                android:text="@string/link"/>
-            <TextView
-                android:id="@+id/linkTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/_40sdp"
-                android:textSize="@dimen/_20sdp"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/googleFitTextView"
-                android:text="@string/google_fit"/>
+
+                <TextView
+                    android:id="@+id/locationTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/location_fragment"
+                    android:textSize="@dimen/_15sdp" />
+
+                <TextView
+                    android:id="@+id/linkTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_below="@+id/locationTextView"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/link"
+                    android:textSize="@dimen/_15sdp" />
+
+                <TextView
+                    android:id="@+id/googleFitTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_below="@+id/linkTextView"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/google_fit"
+                    android:textSize="@dimen/_15sdp" />
+
+                <TextView
+                    android:id="@+id/bluetoothTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/googleFitTextView"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/bluetooth_connection"
+                    android:textSize="@dimen/_15sdp" />
             </RelativeLayout>
         </RelativeLayout>
     </com.google.android.material.navigation.NavigationView>

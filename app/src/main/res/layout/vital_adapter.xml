@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.googleFit.VitalAdapter">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/round_corner"
+        android:backgroundTint="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/sysRelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/systolicValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:text="100.4"
+                android:fontFamily="@font/aclonica"
+                android:textColor="@color/home_blue"
+                android:textSize="@dimen/_15sdp" />
+
+            <TextView
+                android:id="@+id/systolicTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/systolicValueTextView"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:text="@string/vital_sys"
+                android:fontFamily="@font/aclonica"
+                android:textColor="@color/home_blue"
+                android:textSize="@dimen/_15sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/diaRelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/sysRelativeLayout">
+
+            <TextView
+                android:id="@+id/diaValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:text="100.4"
+                android:fontFamily="@font/aclonica"
+                android:textColor="@color/home_blue"
+                android:textSize="@dimen/_15sdp" />
+
+            <TextView
+                android:id="@+id/diaTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/diaValueTextView"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:text="@string/vital_dia"
+                android:fontFamily="@font/aclonica"
+                android:textColor="@color/home_blue"
+                android:textSize="@dimen/_15sdp" />
+        </RelativeLayout>
+<TextView
+    android:id="@+id/vitalValueDate"
+    android:layout_above="@+id/graphViewLayout"
+    android:layout_toEndOf="@+id/diaRelativeLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/aclonica"
+    android:textSize="@dimen/_14sdp"/>
+
+        <RelativeLayout
+            android:id="@+id/graphViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/diaRelativeLayout"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="@color/home_blue">
+
+            <TextView
+                android:id="@+id/graphTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/vital_graph"
+                android:visibility="gone"
+                android:fontFamily="@font/aclonica"
+                android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/vitalImageView"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
+            android:background="@drawable/bp_icon"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

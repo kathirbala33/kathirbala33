@@ -26,6 +26,7 @@ import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -44,6 +45,7 @@ public class MapsFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_maps, container, false);
+        context = getActivity();
         initializeUI();
         return view;
     }
@@ -54,13 +56,13 @@ public class MapsFragment extends Fragment {
     }
 
     private void initializeUI() {
-        context = getActivity();
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
+        checkLocationPermission();
         if (mapFragment != null) {
             mapFragment.getMapAsync(callback);
         }
-        checkLocationPermission();
+
     }
 
     private void checkLocationPermission() {
@@ -90,7 +92,7 @@ public class MapsFragment extends Fragment {
                         if (map != null) {
                             map.addMarker(new MarkerOptions().position(latLng).title("Current Location"));
                             map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 12.0f));
-                        }else{
+                        } else {
                             SupportMapFragment mapFragment =
                                     (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
                             if (mapFragment != null) {
