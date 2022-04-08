@@ -1,5 +1,13 @@
 ### Hi there 👋
+hii firends..
 
+**Location** used to display the your current Location,
+
+**Link** it is used to view link details with image
+
+**Google fit** it used ti display the google fit value with chart view
+
+**Bluethooth** only display the current available device in screen with BT address
 <!--
 **kathirbala33/kathirbala33** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
