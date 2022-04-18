@@ -8,6 +8,13 @@ hii firends..
 **Google fit** it used ti display the google fit value with chart view
 
 **Bluethooth** only display the current available device in screen with BT address
+
+**Picker** 
+i) Used to pick the files from the local
+ii)Create a new folder for project, then save the file in new folder.
+iii)Display the values from the new folder.
+iv)Delete Functionality using path.
+v)Display thumbnail of image using path
 <!--
 **kathirbala33/kathirbala33** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
