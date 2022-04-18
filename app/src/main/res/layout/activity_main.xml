@@ -16,11 +16,10 @@
         <ImageView
             android:id="@+id/backArrowImageView"
             android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_25sdp"
+            android:layout_height="@dimen/_30sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            android:background="@drawable/back_arrow"
-            android:backgroundTint="@color/white"
+            android:background="@drawable/back_arrow_image"
             android:contentDescription="@string/app_name" />
 
         <ImageView
@@ -31,7 +30,6 @@
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_10sdp"
             android:background="@drawable/setting"
-            android:backgroundTint="@color/white"
             android:contentDescription="@string/app_name" />
 
         <FrameLayout
@@ -123,10 +121,18 @@
                 <TextView
                     android:id="@+id/bluetoothTextView"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
                     android:layout_below="@+id/googleFitTextView"
                     android:layout_centerHorizontal="true"
                     android:text="@string/bluetooth_connection"
+                    android:textSize="@dimen/_15sdp" />
+                <TextView
+                    android:id="@+id/pickerTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_below="@+id/bluetoothTextView"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/picker_text"
                     android:textSize="@dimen/_15sdp" />
             </RelativeLayout>
         </RelativeLayout>

@@ -5,6 +5,8 @@ public class  ListenerConstant {
     public static final int VITAL_NAVIGATION =100;
     public static final int VITAL_GRAPH_VIEW_NAVIGATION =101;
     public static final int BLUETOOTH_NAVIGATION =102;
+    public static final int FILE_LISTENER =103;
+    public static final int FILE_DELETE_POSITION =104;
     //String
 
     public static String VITAL_BP="com.google.blood_pressure";

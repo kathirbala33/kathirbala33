@@ -2,8 +2,11 @@
     <string name="app_name">My Console</string>
     <string name="location_fragment">Location</string>
     <string name="google_fit">Google Fit</string>
+    <string name="gallery_text">Pick From \n Gallery</string>
+    <string name="document_text">Pick From \n Document</string>
     <string name="link">Link</string>
-    <string name="bluetooth_connection">Bluetooth Conection</string>
+    <string name="bluetooth_connection">Bluetooth Connection</string>
+    <string name="picker_text">Picker</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="vital_title">BloodPressure</string>
     <string name="vital_spo2">Spo2</string>
@@ -28,6 +31,9 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-
+    //Picker String
+    <string name="file_name_with_colon">File Name :</string>
+    <string name="file_format_with_colon">File Format :</string>
+    <string name="file_size_with_colon">File Size :</string>
 
 </resources>

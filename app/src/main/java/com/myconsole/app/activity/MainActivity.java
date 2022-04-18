@@ -5,6 +5,7 @@ import static com.myconsole.app.ListenerConstant.VITAL_NAVIGATION;
 import static com.myconsole.app.commonClass.Utils.printLog;
 import static com.myconsole.app.fragment.LocationFragment.LOCATION_PERMISSION_CODE;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
@@ -27,6 +29,7 @@ import com.myconsole.app.R;
 import com.myconsole.app.commonClass.Utils;
 import com.myconsole.app.databinding.ActivityMainBinding;
 import com.myconsole.app.fragment.MapsFragment;
+import com.myconsole.app.fragment.PickerFragment;
 import com.myconsole.app.fragment.bluetooth.BluetoothFragment;
 import com.myconsole.app.fragment.googleFit.GoogleFitFragment;
 import com.myconsole.app.fragment.googleFit.VitalFragment;
@@ -56,6 +59,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == MapsFragment.REQUEST_CHECK_SETTINGS) {
+            switch (resultCode) {
+                case Activity.RESULT_OK:
+                    Toast.makeText(this, "GPS is tured on", Toast.LENGTH_SHORT).show();
+                    commitFragments(0, "");
+                    break;
+                case Activity.RESULT_CANCELED:
+                    Toast.makeText(this, "GPS required to be tured on", Toast.LENGTH_SHORT).show();
+                    break;
+            }
+        }
+    }
     private void initializeUI() {
         binding.menuImageView.setOnClickListener(this);
         binding.locationTextView.setOnClickListener(this);
@@ -63,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.linkTextView.setOnClickListener(this);
         binding.backArrowImageView.setOnClickListener(this);
         binding.bluetoothTextView.setOnClickListener(this);
+        binding.pickerTextView.setOnClickListener(this);
 //        RunAnimation();
     }
 
@@ -101,6 +120,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             commitFragments(1, "");
         }else if (v.getId() == R.id.bluetoothTextView) {
             commitFragments(5, "");
+        }else if (v.getId() == R.id.pickerTextView) {
+            commitFragments(6, "");
         } else if (v.getId() == R.id.backArrowImageView) {
             onBackPressed();
         }
@@ -139,6 +160,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             fragment.setArguments(bundle);
         }else if (fragmentID == 5) {
             fragment = new BluetoothFragment();
+        }else if (fragmentID ==6) {
+            fragment = new PickerFragment();
         }
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
