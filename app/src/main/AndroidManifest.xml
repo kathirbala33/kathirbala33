@@ -94,6 +94,52 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/fileprovider" />
         </provider>
+
+        //KT
+        <activity
+            android:name=".KTSamples.bluetooth.BluetoothActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KTSamples.encryptDecrypt.EncryptDecryptActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KTSamples.sampleBroadCast.BroadCastReciverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KTSamples.alarm.AlertActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KTSamples.messageSocket.SocketActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KTSamples.messageSocket.ServiceConnectActivity"
+            android:exported="true" />
+        <activity
+            android:name=".KTSamples.KTMainActivity"
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+
+        <service android:name=".KTSamples.KTMainActivity$MainService"/>
+        <service android:name=".KTSamples.service.BluetoothService"/>
+        <service
+            android:name=".KTSamples.messageSocket.ServiceConnectActivity$MyService"
+            android:exported="false" />
+        <service
+            android:name=".KTSamples.service.MessageService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".KTSamples.LocalReciever"
+            android:exported="true" />
     </application>
 
 </manifest>

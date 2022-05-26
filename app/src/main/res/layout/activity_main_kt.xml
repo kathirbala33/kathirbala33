@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="KTSamples.KTMainActivity">
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serviceNavigation" />
+
+    <Button
+        android:id="@+id/serviceNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Navigation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSocket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SocketNavigation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/buttonSocketSample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SocketSampleNavigation"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSocket" />
+
+    <Button
+        android:id="@+id/alertNavigaion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AlertNavigation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSocketSample" />
+
+    <Button
+        android:id="@+id/broadcastReceiver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BroadcastReceiver"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alertNavigaion" />
+
+    <Button
+        android:id="@+id/encryptDecrypt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Encrypt/Decrypt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/broadcastReceiver" />
+
+    <Button
+        android:id="@+id/bluetoothConnection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BluetoothConnection"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/encryptDecrypt" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.github.mikephil.charting.charts.BarChart
-    android:id="@+id/barChart"
+<RelativeLayout
+
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".fragment.googleFit.VitalGraphFragment">
 
-</com.github.mikephil.charting.charts.BarChart>
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp"
+        android:background="@color/white"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        />
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:background="@color/white"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:visibility="gone"/>
+</RelativeLayout>

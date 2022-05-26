@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="KTSamples.bluetooth.BluetoothActivity">
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/bluetoothRecyclerView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.myconsole.app.KTSamples.bluetooth.CircularProgressBar
+        android:id="@+id/indicatorCircle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/progress_circle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bluetoothRecyclerView" />
+   </androidx.constraintlayout.widget.ConstraintLayout>

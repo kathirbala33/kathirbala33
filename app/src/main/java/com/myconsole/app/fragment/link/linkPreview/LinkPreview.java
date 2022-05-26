@@ -1,6 +1,3 @@
-/*
- * Copyright 2018 Mydayda Inc.
- */
 
 package com.myconsole.app.fragment.link.linkPreview;
 

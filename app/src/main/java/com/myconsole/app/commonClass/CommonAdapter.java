@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -85,7 +85,7 @@ public class CommonAdapter extends RecyclerView.Adapter<CommonAdapter.ViewHolder
 
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        private final RelativeLayout fileTotalLayout;
+        private final LinearLayout fileTotalLayout;
         private final TextView titleTextView;
         private final TextView fileExtensionTextView;
         private final TextView fileSizeTextView;

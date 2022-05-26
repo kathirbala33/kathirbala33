@@ -3,19 +3,39 @@ package com.myconsole.app.application;
 import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
-import android.text.style.ForegroundColorSpan;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.google.android.gms.measurement.internal.AppMeasurementDynamiteService;
 import com.myconsole.app.commonClass.Utils;
 
+import java.net.URISyntaxException;
+
+import io.socket.client.IO;
+import io.socket.client.Socket;
+
 public class MyApplication extends Application implements Application.ActivityLifecycleCallbacks {
+    public static Socket socket;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        socketInit();
+    }
+
+    private void socketInit() {
+        try {
+            socket = IO.socket("http://chat.socket.io");
+            Log.d("##socket", "inital");
+        } catch (URISyntaxException e) {
+            Log.d("##socketEx", e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    public static Socket getSocket() {
+        return socket;
     }
 
     @Override

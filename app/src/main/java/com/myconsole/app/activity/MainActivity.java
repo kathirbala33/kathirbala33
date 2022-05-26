@@ -23,6 +23,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.myconsole.app.KTSamples.KTMainActivity;
 import com.myconsole.app.Listener;
 import com.myconsole.app.ListenerConstant;
 import com.myconsole.app.R;
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.backArrowImageView.setOnClickListener(this);
         binding.bluetoothTextView.setOnClickListener(this);
         binding.pickerTextView.setOnClickListener(this);
+        binding.ktSamplesTextView.setOnClickListener(this);
 //        RunAnimation();
     }
 
@@ -122,7 +124,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             commitFragments(5, "");
         }else if (v.getId() == R.id.pickerTextView) {
             commitFragments(6, "");
-        } else if (v.getId() == R.id.backArrowImageView) {
+        } else if (v.getId() == R.id.ktSamplesTextView) {
+
+            binding.drawLayoutMain.closeDrawers();
+            binding.drawLayoutMain.closeDrawer(GravityCompat.START, true);
+            Intent intent = new Intent(this, KTMainActivity.class);
+            startActivity(intent);
+        }else if (v.getId() == R.id.backArrowImageView) {
             onBackPressed();
         }
     }

@@ -8,7 +8,7 @@ android {
     compileSdk 31
     defaultConfig {
         applicationId "com.myconsole.app"
-        minSdk 24
+        minSdk 23
         targetSdk 31
         versionCode 1
         versionName "1.0"
@@ -60,8 +60,9 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
     //socket
-    implementation ('io.socket:socket.io-client:2.0.1') {
-        // excluding org.json which is provided by Android
+    //For Socket.IO
+    implementation('io.socket:socket.io-client:0.8.3') {
         exclude group: 'org.json', module: 'json'
     }
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 }

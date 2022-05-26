@@ -134,6 +134,14 @@
                     android:layout_centerHorizontal="true"
                     android:text="@string/picker_text"
                     android:textSize="@dimen/_15sdp" />
+                <TextView
+                    android:id="@+id/ktSamplesTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_below="@+id/pickerTextView"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/kt_samples_text"
+                    android:textSize="@dimen/_15sdp" />
             </RelativeLayout>
         </RelativeLayout>
     </com.google.android.material.navigation.NavigationView>

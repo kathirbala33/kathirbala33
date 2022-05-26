@@ -3,6 +3,7 @@ package com.myconsole.app.fragment.bluetooth;
 import static com.myconsole.app.ListenerConstant.BLUETOOTH_NAVIGATION;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -36,7 +37,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+@SuppressLint("MissingPermission")
 public class BluetoothFragment extends Fragment implements Listener {
 
     private BluetoothFragmentBinding binding;
@@ -155,6 +156,7 @@ public class BluetoothFragment extends Fragment implements Listener {
         }
     }
 
+
     private void searchBTDevice() {
         bluetoothAdapter.startDiscovery();
         isRegister = true;
@@ -226,7 +228,6 @@ public class BluetoothFragment extends Fragment implements Listener {
                 Utils.printLog("##BluetoothValues", "=-" + Arrays.toString(characteristic.getValue()));
                 String str = new String(characteristic.getValue(), StandardCharsets.UTF_8); // for UTF-8 encoding
                 Utils.printLog("##BluetoothValues1", "=-" + str);
-
             }
         }
     };
