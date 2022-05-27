@@ -32,6 +32,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".WearAppActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.DialogActivity"
             android:exported="false" />
         <activity
@@ -95,7 +98,6 @@
                 android:resource="@xml/fileprovider" />
         </provider>
 
-        //KT
         <activity
             android:name=".KTSamples.bluetooth.BluetoothActivity"
             android:exported="false" />
@@ -117,18 +119,35 @@
         <activity
             android:name=".KTSamples.KTMainActivity"
             android:exported="true">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
-
-        <service android:name=".KTSamples.KTMainActivity$MainService"/>
-        <service android:name=".KTSamples.service.BluetoothService"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <service android:name=".KTSamples.KTMainActivity$MainService" />
+        <service android:name=".KTSamples.service.BluetoothService" />
         <service
             android:name=".KTSamples.messageSocket.ServiceConnectActivity$MyService"
             android:exported="false" />
+        <service
+            android:name=".service.AppWearService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.DATA_CHANGED" />
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+                <data
+                    android:host="*"
+                    android:pathPrefix="/Data_from_wear_to_app"
+                    android:scheme="wear" />
+            </intent-filter>
+        </service>
         <service
             android:name=".KTSamples.service.MessageService"
             android:exported="false">

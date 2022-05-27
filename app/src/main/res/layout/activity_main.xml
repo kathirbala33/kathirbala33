@@ -142,6 +142,14 @@
                     android:layout_centerHorizontal="true"
                     android:text="@string/kt_samples_text"
                     android:textSize="@dimen/_15sdp" />
+                <TextView
+                    android:id="@+id/wearOSTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_below="@+id/ktSamplesTextView"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/wear_os_watch"
+                    android:textSize="@dimen/_15sdp" />
             </RelativeLayout>
         </RelativeLayout>
     </com.google.android.material.navigation.NavigationView>

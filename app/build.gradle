@@ -64,5 +64,9 @@ dependencies {
     implementation('io.socket:socket.io-client:0.8.3') {
         exclude group: 'org.json', module: 'json'
     }
+    //for Rest api
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    //Wear os (Access watch)
+    implementation 'com.google.android.gms:play-services-wearable:17.1.0'
+    wearApp project(':wearconsole')
 }

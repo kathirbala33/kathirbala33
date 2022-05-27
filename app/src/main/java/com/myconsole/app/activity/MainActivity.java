@@ -25,8 +25,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.myconsole.app.KTSamples.KTMainActivity;
 import com.myconsole.app.Listener;
-import com.myconsole.app.ListenerConstant;
 import com.myconsole.app.R;
+import com.myconsole.app.WearAppActivity;
 import com.myconsole.app.commonClass.Utils;
 import com.myconsole.app.databinding.ActivityMainBinding;
 import com.myconsole.app.fragment.MapsFragment;
@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
     }
+
     private void initializeUI() {
         binding.menuImageView.setOnClickListener(this);
         binding.locationTextView.setOnClickListener(this);
@@ -84,17 +85,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.bluetoothTextView.setOnClickListener(this);
         binding.pickerTextView.setOnClickListener(this);
         binding.ktSamplesTextView.setOnClickListener(this);
+        binding.wearOSTextView.setOnClickListener(this);
 //        RunAnimation();
     }
 
-    private void RunAnimation()
-    {
+    private void RunAnimation() {
         Animation a = AnimationUtils.loadAnimation(this, R.anim.animation);
         a.reset();
         TextView tv = (TextView) findViewById(R.id.firstTextView);
         tv.clearAnimation();
         tv.startAnimation(a);
     }
+
     @Override
     public void onBackPressed() {
 //        super.onBackPressed();
@@ -102,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (!fragmentName.isEmpty()) {
             if (fragmentName.equals("VitalFragment") || fragmentName.equals("VitalGraphFragment")) {
                 commitFragments(2, "");
-            }else{
+            } else {
                 this.recreate();
             }
         } else {
@@ -120,23 +122,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             commitFragments(2, "");
         } else if (v.getId() == R.id.linkTextView) {
             commitFragments(1, "");
-        }else if (v.getId() == R.id.bluetoothTextView) {
+        } else if (v.getId() == R.id.bluetoothTextView) {
             commitFragments(5, "");
-        }else if (v.getId() == R.id.pickerTextView) {
+        } else if (v.getId() == R.id.pickerTextView) {
             commitFragments(6, "");
         } else if (v.getId() == R.id.ktSamplesTextView) {
-
             binding.drawLayoutMain.closeDrawers();
             binding.drawLayoutMain.closeDrawer(GravityCompat.START, true);
             Intent intent = new Intent(this, KTMainActivity.class);
             startActivity(intent);
-        }else if (v.getId() == R.id.backArrowImageView) {
+        } else if (v.getId() == R.id.wearOSTextView) {
+            binding.drawLayoutMain.closeDrawers();
+            binding.drawLayoutMain.closeDrawer(GravityCompat.START, true);
+            Intent intent = new Intent(this, WearAppActivity.class);
+            startActivity(intent);
+
+        } else if (v.getId() == R.id.backArrowImageView) {
             onBackPressed();
         }
     }
+
     public static void visible(Intent intent, Context context) {
         Utils.printLog("CheckNavigate", "yes");
-        if(intent.getComponent().getShortClassName().contains("MapsActivity")){
+        if (intent.getComponent().getShortClassName().contains("MapsActivity")) {
             Intent setIntent = new Intent(context, MapsActivity.class);
             setIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             Utils.printLog("CheckNavigatess", "yes");
@@ -145,6 +153,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       /*  intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);*/
     }
+
     private void commitFragments(int fragmentID, String vitalName) {
         Fragment fragment = null;
         binding.centerImageView.setVisibility(View.GONE);
@@ -166,9 +175,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             bundle.putString("VitalName", vitalName);
             fragment = new VitalGraphFragment();
             fragment.setArguments(bundle);
-        }else if (fragmentID == 5) {
+        } else if (fragmentID == 5) {
             fragment = new BluetoothFragment();
-        }else if (fragmentID ==6) {
+        } else if (fragmentID == 6) {
             fragment = new PickerFragment();
         }
         FragmentManager fragmentManager = getSupportFragmentManager();

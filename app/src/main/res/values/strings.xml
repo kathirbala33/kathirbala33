@@ -8,6 +8,7 @@
     <string name="bluetooth_connection">Bluetooth Connection</string>
     <string name="picker_text">Picker</string>
     <string name="kt_samples_text">KT Samples</string>
+    <string name="wear_os_watch">Wear OS Watch</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="vital_title">BloodPressure</string>
     <string name="vital_spo2">Spo2</string>
