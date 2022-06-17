@@ -26,6 +26,8 @@ import androidx.fragment.app.FragmentTransaction;
 import com.myconsole.app.KTSamples.KTMainActivity;
 import com.myconsole.app.Listener;
 import com.myconsole.app.R;
+import com.myconsole.app.Retrofit.RetrofitActivity;
+import com.myconsole.app.ToastCustom.ToastActivity;
 import com.myconsole.app.WearAppActivity;
 import com.myconsole.app.commonClass.Utils;
 import com.myconsole.app.databinding.ActivityMainBinding;
@@ -86,6 +88,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.pickerTextView.setOnClickListener(this);
         binding.ktSamplesTextView.setOnClickListener(this);
         binding.wearOSTextView.setOnClickListener(this);
+        binding.retrofitTextView.setOnClickListener(this);
+        binding.toastTextView.setOnClickListener(this);
 //        RunAnimation();
     }
 
@@ -136,8 +140,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             binding.drawLayoutMain.closeDrawer(GravityCompat.START, true);
             Intent intent = new Intent(this, WearAppActivity.class);
             startActivity(intent);
-
-        } else if (v.getId() == R.id.backArrowImageView) {
+        } else if (v.getId() == R.id.retrofitTextView) {
+            binding.drawLayoutMain.closeDrawers();
+            binding.drawLayoutMain.closeDrawer(GravityCompat.START, true);
+            Intent intent = new Intent(this, RetrofitActivity.class);
+            startActivity(intent);
+        }
+        else if (v.getId() == R.id.toastTextView) {
+            binding.drawLayoutMain.closeDrawers();
+            binding.drawLayoutMain.closeDrawer(GravityCompat.START, true);
+            Intent intent = new Intent(this, ToastActivity.class);
+            startActivity(intent);
+        }else if (v.getId() == R.id.backArrowImageView) {
             onBackPressed();
         }
     }

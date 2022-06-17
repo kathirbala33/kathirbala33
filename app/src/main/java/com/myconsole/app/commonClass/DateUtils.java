@@ -3,10 +3,13 @@ package com.myconsole.app.commonClass;
 import android.annotation.SuppressLint;
 import android.icu.text.SimpleDateFormat;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.util.Date;
 import java.util.Locale;
+import java.util.TimeZone;
 
+@SuppressLint("NewApi")
 public class DateUtils {
 
     public static SimpleDateFormat PATTERN_YEAR = new SimpleDateFormat("yyyy", Locale.getDefault());
@@ -49,5 +52,24 @@ public class DateUtils {
         }
         changedFormat = needToChangeFormat.format(date1);
         return changedFormat;
+    }
+    public static String getCurrentDateUtcFormate() {
+        return DateUtils.dateInUtcFormat(getCurrentDate());
+    }
+    public static String dateInUtcFormat(String dateString) {
+        String utcDate = "";
+        if (!dateString.isEmpty()) {
+            DateFormat format = new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+            Date date = null;
+            try {
+                date = format.parse(dateString);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            DateFormat formatterIST = new java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.US);
+            formatterIST.setTimeZone(TimeZone.getTimeZone("UTC"));
+            utcDate = formatterIST.format(date);
+        }
+        return utcDate;
     }
 }

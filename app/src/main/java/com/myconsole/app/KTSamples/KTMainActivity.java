@@ -20,6 +20,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.myconsole.app.KTSamples.MVVMViewModel.LifeCycleActivity;
 import com.myconsole.app.KTSamples.alarm.AlertActivity;
 import com.myconsole.app.KTSamples.bluetooth.BluetoothActivity;
 import com.myconsole.app.KTSamples.encryptDecrypt.EncryptDecryptActivity;
@@ -141,6 +142,10 @@ public class KTMainActivity extends AppCompatActivity {
         });
         findViewById(R.id.bluetoothConnection).setOnClickListener(view -> {
             Intent intent = new Intent(this, BluetoothActivity.class);
+            startActivity(intent);
+        });
+        findViewById(R.id.lifeCycle).setOnClickListener(view -> {
+            Intent intent = new Intent(this, LifeCycleActivity.class);
             startActivity(intent);
         });
     }

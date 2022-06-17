@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
-    id'com.google.gms.google-services'
+    id 'com.google.gms.google-services'
 }
 def room_version = "2.4.1"
 android {
@@ -11,12 +11,57 @@ android {
         minSdk 23
         targetSdk 31
         versionCode 1
+        flavorDimensions "default"
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+   /* productFlavors {
+        myuse {
+            applicationId "com.myconsole.app"
+            versionName "1.0.1"
+            versionCode 1
+        }
+        producation {
+            applicationId "com.myconsole.app"
+            versionName "2.0.1"
+            versionCode 1
+        }
+    }*/
+/*    buildTypes {
+        release {
+//            productFlavors.myuse.signingConfig signingConfigs.sam
+//            productFlavors.producation.signingConfig signingConfigs.sam
+            minifyEnabled true
+            crunchPngs false // or true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }*/
+  /*  signingConfigs {
+        sam {
+            storeFile file("../gradle/samplekey.jks")
+            storePassword 'asdf123'
+            keyAlias 'asdfkey'
+            keyPassword 'asdf123'
+        }
+    }*/
+
+    signingConfigs {
+        cngs {
+            storeFile file("../gradle/test_key.jks")
+            storePassword 'android123'
+            keyAlias 'androidkey'
+            keyPassword 'android123'
+        }
+    }
+    productFlavors {
+        cng {
+        }
+    }
     buildTypes {
         release {
+            productFlavors.cng.signingConfig signingConfigs.cngs
+            crunchPngs false
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -69,4 +114,11 @@ dependencies {
     //Wear os (Access watch)
     implementation 'com.google.android.gms:play-services-wearable:17.1.0'
     wearApp project(':wearconsole')
+    //Retrofit for using REST APIs
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
+
+    implementation "android.arch.lifecycle:extensions:1.1.1"
 }

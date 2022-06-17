@@ -150,6 +150,22 @@
                     android:layout_centerHorizontal="true"
                     android:text="@string/wear_os_watch"
                     android:textSize="@dimen/_15sdp" />
+                <TextView
+                    android:id="@+id/retrofitTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_below="@+id/wearOSTextView"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/rest_api_text"
+                    android:textSize="@dimen/_15sdp" />
+                <TextView
+                    android:id="@+id/toastTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_below="@+id/retrofitTextView"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/toast_text"
+                    android:textSize="@dimen/_15sdp" />
             </RelativeLayout>
         </RelativeLayout>
     </com.google.android.material.navigation.NavigationView>
