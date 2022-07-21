@@ -10,9 +10,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -38,11 +35,12 @@ import com.myconsole.app.fragment.googleFit.GoogleFitFragment;
 import com.myconsole.app.fragment.googleFit.VitalFragment;
 import com.myconsole.app.fragment.googleFit.VitalGraphFragment;
 import com.myconsole.app.fragment.link.LinkFragment;
+import com.myconsole.app.instgram.ActiveService;
+import com.myconsole.app.instgram.util.Method;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, Listener {
     private ActivityMainBinding binding;
-    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,16 +88,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.wearOSTextView.setOnClickListener(this);
         binding.retrofitTextView.setOnClickListener(this);
         binding.toastTextView.setOnClickListener(this);
-//        RunAnimation();
+//        RunAnimation()
     }
 
-    private void RunAnimation() {
-        Animation a = AnimationUtils.loadAnimation(this, R.anim.animation);
-        a.reset();
-        TextView tv = (TextView) findViewById(R.id.firstTextView);
-        tv.clearAnimation();
-        tv.startAnimation(a);
-    }
+//    private void RunAnimation() {
+//        Animation a = AnimationUtils.loadAnimation(this, R.anim.animation);
+//        a.reset();
+//        TextView tv = (TextView) findViewById(R.id.firstTextView);
+//        tv.clearAnimation();
+//        tv.startAnimation(a);
+//    }
 
     @Override
     public void onBackPressed() {
@@ -145,13 +143,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             binding.drawLayoutMain.closeDrawer(GravityCompat.START, true);
             Intent intent = new Intent(this, RetrofitActivity.class);
             startActivity(intent);
-        }
-        else if (v.getId() == R.id.toastTextView) {
+        } else if (v.getId() == R.id.toastTextView) {
             binding.drawLayoutMain.closeDrawers();
             binding.drawLayoutMain.closeDrawer(GravityCompat.START, true);
             Intent intent = new Intent(this, ToastActivity.class);
             startActivity(intent);
-        }else if (v.getId() == R.id.backArrowImageView) {
+        } else if (v.getId() == R.id.backArrowImageView) {
             onBackPressed();
         }
     }

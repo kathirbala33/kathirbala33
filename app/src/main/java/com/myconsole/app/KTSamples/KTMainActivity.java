@@ -148,6 +148,10 @@ public class KTMainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, LifeCycleActivity.class);
             startActivity(intent);
         });
+        findViewById(R.id.downloadLink).setOnClickListener(view -> {
+            Intent intent = new Intent(this, LinkDownloadActivity.class);
+            startActivity(intent);
+        });
     }
 
     public ArrayList<String> getAppSignatures() {

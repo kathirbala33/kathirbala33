@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.myconsole.app.commonClass.Utils;
@@ -59,7 +60,12 @@ public class LifeCycleFragment extends Fragment {
     private void getModelView() {
 //        model = new ViewModelProvider(this).get(Model.class);
         model = ViewModelProviders.of(this).get(Model.class);
-        model.getTextValue();
+        model.getTextValue().observe(getActivity(), new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                Utils.printLog("TestValues",s);
+            }
+        });
     }
 
     @Override

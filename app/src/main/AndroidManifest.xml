@@ -19,6 +19,7 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission
         android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
@@ -31,6 +32,9 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+        <activity
+            android:name=".KTSamples.LinkDownloadActivity"
+            android:exported="false" />
         <activity
             android:name=".KTSamples.MVVMViewModel.LifeCycleActivity"
             android:exported="false" />
@@ -119,6 +123,7 @@
         <activity
             android:name=".KTSamples.alarm.AlertActivity"
             android:exported="false" />
+
         <activity
             android:name=".KTSamples.messageSocket.SocketActivity"
             android:exported="false" />
@@ -146,6 +151,18 @@
         <service
             android:name=".KTSamples.messageSocket.ServiceConnectActivity$MyService"
             android:exported="false" />
+        <service
+            android:name=".service.MyService"
+            android:exported="true" />
+        <service
+            android:name=".instgram.GetAppService"
+            android:enabled="true" />
+        <service
+            android:name=".instgram.ActiveService"
+            android:enabled="true" />
+        <service
+            android:name=".instgram.DownloadService"
+            android:exported="true" />
         <service
             android:name=".service.AppWearService"
             android:enabled="true"
